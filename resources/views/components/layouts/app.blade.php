@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -11,12 +11,16 @@
 
     <link rel="icon" href="{{ asset('images/logo.webp') }}" type="image/webp">
 
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     @stack('styles')
 </head>
 
-<body class="bg-gray-50">
+<body
+    class="gotham-bg bg-zinc-950 bg-linear-to-br from-[#0A0A0B] via-[#111113] to-black
+         text-neutral-200 antialiased selection:bg-red-800 selection:text-black">
     @isset($navbar)
         {!! $navbar !!}
     @endisset
@@ -25,7 +29,9 @@
         {{ $slot }}
     </main>
 
-    <x-footer />
+    @isset($footer)
+        {!! $footer !!}
+    @endisset
 
     @stack('scripts')
 
