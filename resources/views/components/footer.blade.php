@@ -1,46 +1,33 @@
 <footer
-    class="relative overflow-hidden
-    border-t border-slate-200 dark:border-neutral-800
-    px-6 md:px-16 lg:px-24 xl:px-32
-    pt-20 pb-10
-    text-slate-600 dark:text-neutral-400">
+    class="relative overflow-hidden bg-linear-to-tr from-bg via-bg-soft to-blue-100 dark:to-black
+    border-t border-highlight/20 drop-shadow-4xl drop-shadow-highlight
+    px-6 md:px-16 lg:px-24 xl:px-32 pt-20 pb-10 text-desc">
 
-    <!-- noise -->
     <div class="absolute inset-0 bg-[url('/images/noise.png')]
         opacity-[0.04] pointer-events-none"></div>
 
-    <!-- atmosphere glow -->
-    <div
-        class="absolute -top-40 right-0
-        w-104 h-104
-        bg-sky-300/40 dark:bg-red-900/10
-        blur-[160px] rounded-full">
+    <div class="absolute -top-40 right-0 w-104 h-104 bg-highlight/20 blur-[160px] rounded-full">
     </div>
 
-    <div class="relative z-10 max-w-7xl mx-auto">
+    <div class="absolute -bottom-40 left-0 w-104 h-104 bg-bg blur-[160px] rounded-full">
+    </div>
 
+    <div class="relative z-10 mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-14">
-
-            <!-- BRAND -->
             <div class="md:col-span-2 space-y-6">
                 <h3
-                    class="font-league-spartan font-bold
-                    uppercase tracking-widest
-                    text-slate-900 dark:text-neutral-100
-                    text-sm">
+                    class="font-league-spartan font-bold uppercase tracking-widest text-heading text-sm">
                     Indra Mahayana
                 </h3>
 
-                <p class="max-w-md text-sm leading-relaxed
-                    text-slate-500 dark:text-neutral-500">
+                <p class="max-w-md text-sm leading-relaxed text-desc">
                     Designing interfaces and building systems with clarity,
                     structure, and restraint. Less noise. More meaning.
                 </p>
 
-                <div class="flex items-center gap-5
-                    text-slate-500 dark:text-neutral-500">
+                <div class="flex items-center gap-5 text-desc">
 
-                    <a href="#"
+                    <a href="{{ config('social.github') }}"
                         class="hover:text-sky-600
                         dark:hover:text-red-700 transition">
                         GitHub
@@ -48,7 +35,7 @@
 
                     <span class="opacity-30">/</span>
 
-                    <a href="#"
+                    <a href="{{ config('social.linkedin') }}"
                         class="hover:text-sky-600
                         dark:hover:text-red-700 transition">
                         LinkedIn
@@ -56,7 +43,7 @@
 
                     <span class="opacity-30">/</span>
 
-                    <a href="#"
+                    <a href="{{ config('social.instagram') }}"
                         class="hover:text-sky-600
                         dark:hover:text-red-700 transition">
                         Instagram
@@ -64,7 +51,6 @@
                 </div>
             </div>
 
-            <!-- NAVIGATION -->
             <div>
                 <h4
                     class="text-xs uppercase tracking-widest
@@ -75,37 +61,32 @@
 
                 <ul class="space-y-4 text-sm">
                     <li>
-                        <a href="#home"
-                            class="hover:text-sky-600
-                            dark:hover:text-red-700 transition">
+                        <a href="{{ route('home') }}"
+                            class="hover:text-highlight transition">
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#services"
-                            class="hover:text-sky-600
-                            dark:hover:text-red-700 transition">
-                            Services
+                        <a href="{{ route('resume') }}"
+                            class="hover:text-highlight transition">
+                            Resume
                         </a>
                     </li>
                     <li>
-                        <a href="#projects"
-                            class="hover:text-sky-600
-                            dark:hover:text-red-700 transition">
+                        <a href="{{ route('projects') }}"
+                            class="hover:text-highlight transition">
                             Projects
                         </a>
                     </li>
                     <li>
-                        <a href="#contact"
-                            class="hover:text-sky-600
-                            dark:hover:text-red-700 transition">
+                        <a href="{{ route('contact') }}"
+                            class="hover:text-highlight transition">
                             Contact
                         </a>
                     </li>
                 </ul>
             </div>
 
-            <!-- SIGNAL -->
             <div>
                 <h4
                     class="text-xs uppercase tracking-widest
@@ -130,13 +111,11 @@
             </div>
         </div>
 
-        <!-- divider -->
         <div class="w-full h-px
             bg-slate-200 dark:bg-neutral-800
             my-12">
         </div>
 
-        <!-- bottom -->
         <div
             class="flex flex-col md:flex-row
             items-center justify-between
@@ -167,3 +146,18 @@
         </div>
     </div>
 </footer>
+
+<script>
+    const easterEggTrigger = document.getElementById('easter-egg-trigger');
+    const easterEgg = document.getElementById('easter-egg');
+
+    easterEggTrigger.addEventListener('mouseenter', () => {
+        easterEgg.classList.remove('opacity-0', 'blur-sm');
+        easterEgg.classList.add('opacity-100', 'blur-none');
+    });
+
+    easterEggTrigger.addEventListener('mouseleave', () => {
+        easterEgg.classList.remove('opacity-100', 'blur-none');
+        easterEgg.classList.add('opacity-0', 'blur-sm');
+    });
+</script>

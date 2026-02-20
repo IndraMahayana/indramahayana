@@ -42,12 +42,11 @@
         <main class="min-h-screen">
             {{ $slot }}
         </main>
-
-        @isset($footer)
-            {!! $footer !!}
-        @endisset
-
     </div>
+
+    @isset($footer)
+        {!! $footer !!}
+    @endisset
 
     @stack('scripts')
 

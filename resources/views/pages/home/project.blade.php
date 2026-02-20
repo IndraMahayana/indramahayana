@@ -1,18 +1,18 @@
-<section id="projects" class="relative py-10">
+<section id="projects" class="relative flex flex-col items-center py-10">
 
     <div class="absolute inset-0 bg-[url('/images/noisy.jpg')]
          pointer-events-none">
     </div>
 
     <div
-        class="absolute -right-80 w-md h-112
+        class="absolute -right-10 w-md h-112
         bg-highlight/20
         blur-[160px]">
     </div>
 
     <div
         class="absolute bottom-0 left-0 w-[24rem] h-96
-        bg-highlight/20
+        bg-highlight/10
         blur-[140px] rounded-full">
     </div>
 
