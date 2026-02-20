@@ -6,64 +6,51 @@
 @endphp
 
 <div class="relative group">
-
-    <!-- background index -->
-    <div class="absolute inset-0 flex items-center justify-center
+    <div class="absolute inset-3 -right-5 flex items-center justify-center
                 pointer-events-none select-none">
         <span
             class="text-[160px] md:text-[240px]
                    font-extrabold uppercase
                    tracking-widest
-                   text-neutral-200/40
-                   dark:text-neutral-800/20">
-            {{ str_pad($index, 2, '0', STR_PAD_LEFT) }}
+                   text-gray-300/50 dark:text-neutral-900">
+            {{ str_pad($index, 2) }}
         </span>
     </div>
 
-    <div class="relative z-10 grid lg:grid-cols-2 gap-20 items-center">
-
-        <!-- IMAGE -->
+    <div class="relative z-10 grid lg:grid-cols-2 gap-30 items-center">
         <div class="{{ $isEven ? 'lg:order-2' : '' }} relative">
-
-            <!-- cinematic glow -->
             <div
                 class="absolute inset-0
-                        bg-neutral-200
-                        dark:bg-black
-                        blur-xl opacity-40 dark:opacity-70">
+                        hover:bg-highlight/10
+                        blur-xl">
             </div>
 
             <div
                 class="relative overflow-hidden
-                       border border-neutral-200 dark:border-neutral-800
-                       bg-white/70 dark:bg-neutral-900/70
-                       transition duration-500
-                       group-hover:-translate-y-2">
-
-                <!-- accent line -->
+                       border border-bg hover:border-highlight
+                       bg-bg transition duration-500 group-hover:-translate-y-2">
                 <div
                     class="absolute top-0 left-0 right-0 h-1
-                           bg-red-600/40 dark:bg-red-900/50
+                           bg-highlight
                            opacity-0 group-hover:opacity-100
                            transition duration-500">
                 </div>
 
                 <img src="{{ $image }}" alt="{{ $title }}"
                     class="w-full h-105 object-cover
-                           brightness-95 dark:brightness-75
+                           brightness-95 dark:brightness-60
                            contrast-105
                            transition duration-700
                            group-hover:brightness-100">
             </div>
         </div>
 
-        <!-- TEXT -->
         <div class="space-y-6 {{ $isEven ? 'lg:order-1' : '' }}">
 
             <div
-                class="text-[11px] tracking-[0.35em]
+                class="text-[12px] tracking-[0.35em]
                         uppercase space-y-2
-                        text-neutral-500 dark:text-neutral-500">
+                        text-neutral-500">
 
                 <div>Case {{ str_pad($index, 2, '0', STR_PAD_LEFT) }}</div>
 
@@ -75,17 +62,13 @@
             </div>
 
             <h3
-                class="text-2xl md:text-3xl
-                       font-extrabold uppercase
-                       leading-tight
-                       text-neutral-900 dark:text-neutral-100">
+                class="text-2xl md:text-4xl font-extrabold uppercase leading-tight text-heading">
                 {{ $title }}
             </h3>
 
-            <div class="w-16 h-0.5 bg-red-600 dark:bg-red-800"></div>
+            <div class="w-44 h-0.5 bg-highlight"></div>
 
-            <p class="leading-relaxed max-w-xl
-                      text-neutral-600 dark:text-neutral-400">
+            <p class="leading-relaxed max-w-xl text-desc">
                 {{ $description }}
             </p>
 
@@ -93,11 +76,10 @@
                 class="inline-block
                        text-sm uppercase tracking-widest
                        text-neutral-500
-                       hover:text-red-600 dark:hover:text-red-500
+                       hover:text-highlight
                        transition">
                 Open Case File →
             </a>
-
         </div>
     </div>
 </div>

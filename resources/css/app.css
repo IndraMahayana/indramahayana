@@ -28,6 +28,7 @@
     --color-bg-elevated: 255 255 255;
     --color-heading: oklch(0.13 0.028 261.692);
     --color-highlight: oklch(0.5 0.134 242.749);
+    --color-desc: oklch(0.446 0.043 257.281);
     --color-border: 226 232 240;
     --selection: 147 197 253;
 }
@@ -38,6 +39,7 @@
     --color-bg-elevated: 24 24 27;
     --color-heading: oklch(0.922 0 0);
     --color-highlight: oklch(0.505 0.213 27.518);
+    --color-desc: oklch(0.708 0 0);
     --color-border: 39 39 42;
     --selection: 127 29 29;
 }

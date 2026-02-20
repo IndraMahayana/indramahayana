@@ -39,7 +39,7 @@
             </h3>
 
             <h1
-                class="font-league-spartan font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-heading leading-[1.05] uppercase mt-4 drop-shadow-[0_15px_60px_rgba(0,0,0,0.95)]">
+                class="font-league-spartan font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-heading leading-[1.05] uppercase mt-4">
                 I Build Fast, Accessible,<br class="hidden sm:block">User-Centered Websites
             </h1>
 
@@ -51,7 +51,6 @@
             </p>
 
             <div class="flex flex-col sm:flex-row items-center gap-4 mt-8 w-full sm:w-auto">
-
                 <x-button href="#projects" variant="main" fontSize="lg" class="uppercase">
                     See My Work
                 </x-button>
