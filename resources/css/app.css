@@ -22,12 +22,60 @@
     --font-bebas-neue: "Bebas Neue", sans-serif;
 }
 
+@theme {
+    --color-bg: oklch(0.968 0.007 247.896);
+    --color-bg-soft: oklch(0.929 0.013 255.508);
+    --color-bg-elevated: 255 255 255;
+    --color-heading: oklch(0.13 0.028 261.692);
+    --color-highlight: oklch(0.5 0.134 242.749);
+    --color-border: 226 232 240;
+    --selection: 147 197 253;
+}
+
+.dark {
+    --color-bg: #0A0A0B;
+    --color-bg-soft: #111113;
+    --color-bg-elevated: 24 24 27;
+    --color-heading: oklch(0.922 0 0);
+    --color-highlight: oklch(0.505 0.213 27.518);
+    --color-border: 39 39 42;
+    --selection: 127 29 29;
+}
+
+@layer base {
+    body {
+        background-color: rgb(var(--color-bg));
+        color: rgb(var(--color-text));
+    }
+
+    ::selection {
+        background-color: rgb(var(--selection));
+        color: black;
+    }
+}
+
+.theme-thumb {
+    transition: transform 0.3s ease;
+}
+
+html:not(.dark) .theme-thumb {
+    transform: translateX(0);
+}
+
+html.dark .theme-thumb {
+    transform: translateX(calc(100% + 4px));
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 [x-cloak] {
     display: none !important;
+}
+
+nav {
+    transform-origin: top;
 }
 
 .gotham-bg {

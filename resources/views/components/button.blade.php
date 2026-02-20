@@ -8,9 +8,27 @@
 
 @php
     $variants = [
-        'red' => 'bg-red-700 hover:bg-red-800 text-gray-50 border-red-700',
-        'gray' => 'bg-gray-800 hover:bg-gray-900 text-gray-50',
-        'transparent' => 'bg-transparent text-gray-800 hover:bg-gray-800 hover:text-gray-50 border border-gray-800',
+        'main' => '
+            bg-red-600 hover:bg-red-700
+            dark:bg-red-700 dark:hover:bg-red-800
+            text-white
+            border border-red-600 dark:border-red-700
+        ',
+
+        'gray' => '
+            bg-neutral-900 hover:bg-neutral-800
+            dark:bg-neutral-800 dark:hover:bg-neutral-700
+            text-neutral-100
+            border border-neutral-800 dark:border-neutral-700
+        ',
+
+        'transparent' => '
+            bg-transparent
+            text-neutral-900 dark:text-neutral-100
+            border border-neutral-300 dark:border-neutral-700
+            hover:bg-neutral-900 hover:text-white
+            dark:hover:bg-neutral-100 dark:hover:text-neutral-900
+        ',
     ];
 
     $sizes = [
@@ -24,8 +42,12 @@
 @endphp
 
 <a href="{{ $href }}" target="{{ $target }}"
-    class="w-fit flex items-center justify-center focus:outline-none font-heading font-bold rounded-lg
-          {{ $sizeClass }} py-2 text-center cursor-pointer
-          {{ $color }} {{ $class }}">
+    class="w-fit flex items-center justify-center
+           font-league-spartan font-bold rounded-lg
+           transition-all duration-300
+           focus:outline-none
+           shadow-[0_15px_50px_rgba(139,0,0,0.35)]
+           {{ $sizeClass }} py-2
+           {{ $color }} {{ $class }}">
     {{ $slot }}
 </a>
