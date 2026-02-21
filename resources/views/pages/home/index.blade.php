@@ -1,4 +1,4 @@
-<x-layouts.app>
+<x-layouts.app class="px-4 sm:px-6 md:px-16 lg:px-24 xl:px-32 pt-28 md:pt-0">
     <x-slot name="navbar">
         <x-navbar />
     </x-slot>

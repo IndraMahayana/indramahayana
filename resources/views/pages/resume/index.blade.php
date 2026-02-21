@@ -7,17 +7,10 @@
         <x-footer />
     </x-slot>
 
-    <section class="relative overflow-hidden py-32
-        bg-white dark:bg-black">
-
-        <div
-            class="absolute inset-0 bg-[url('/images/noise.png')]
-            opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
-        </div>
-
+    <section class="relative overflow-hidden py-32">
         <div
             class="absolute -top-40 -left-40 w-120 h-120
-            bg-blue-200/40 dark:bg-red-900/20 blur-[160px] rounded-full">
+            bg-highlight/20 blur-[160px] rounded-full">
         </div>
 
         <div
@@ -26,30 +19,22 @@
         </div>
 
         <div class="max-w-5xl mx-auto px-6 relative z-10 text-center">
-
             <h3
-                class="uppercase tracking-[0.35em]
-                text-xs
-                text-blue-700 dark:text-red-700
-                mb-6">
+                class="uppercase font-league-spartan tracking-[0.35em] text-xs text-highlight mb-6">
                 Profile Dossier
             </h3>
 
             <h1
                 class="text-4xl sm:text-5xl md:text-6xl
-                font-extrabold uppercase
-                text-neutral-900 dark:text-neutral-100
-                leading-tight">
+                font-extrabold font-league-spartan uppercase text-heading leading-tight">
                 Indra Mahayana
             </h1>
 
-            <div class="w-24 h-0.5
-                bg-blue-600 dark:bg-red-800
+            <div class="w-58 h-0.5 bg-highlight
                 mx-auto mt-6"></div>
 
             <p
-                class="mt-8 max-w-3xl mx-auto text-lg leading-relaxed
-                text-neutral-600 dark:text-neutral-400">
+                class="mt-8 max-w-3xl mx-auto text-lg leading-relaxed text-desc font-dm-sans">
                 I design and engineer digital systems with intention.
                 Interfaces must feel deliberate. Architectures must endure.
                 Every line of code should survive scale, stress, and scrutiny.
@@ -58,31 +43,25 @@
     </section>
 
     <section
-        class="relative py-28 border-t
-        border-neutral-200 dark:border-neutral-900
-        bg-slate-50 dark:bg-black">
+        class="relative py-28 border-t border-highlight/20">
 
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-20 items-start">
 
                 <div>
                     <h2
-                        class="text-3xl font-extrabold uppercase
-                        text-neutral-900 dark:text-neutral-100">
+                        class="text-3xl font-extrabold uppercase text-heading font-league-spartan">
                         Philosophy
                     </h2>
 
                     <div
-                        class="w-20 h-0.5
-                        bg-blue-600 dark:bg-red-800
+                        class="w-20 h-0.5 bg-highlight
                         mt-6">
                     </div>
                 </div>
 
                 <div
-                    class="space-y-6 text-lg leading-relaxed
-                    text-neutral-600 dark:text-neutral-400">
-
+                    class="space-y-6 text-lg leading-relaxed text-desc font-dm-sans">
                     <p>
                         I operate at the intersection of interface and logic.
                         Design without structure collapses. Code without clarity decays.
@@ -104,45 +83,37 @@
     </section>
 
     <section
-        class="relative py-32 border-t
-        border-neutral-200 dark:border-neutral-900
-        bg-white dark:bg-black">
+        class="relative py-32 border-t border-highlight/20">
 
         <div class="max-w-6xl mx-auto px-6">
 
-            <h2 class="text-3xl font-extrabold uppercase
-                text-neutral-900 dark:text-neutral-100 mb-16">
+            <h2 class="text-3xl font-extrabold uppercase text-heading font-league-spartan mb-16">
                 Professional Record
             </h2>
 
             <div class="relative">
                 <div class="absolute left-6 top-0 bottom-0 w-px
-                    bg-blue-300 dark:bg-red-900/40">
+                    bg-highlight/40">
                 </div>
 
                 <div class="space-y-28">
-
                     <div class="relative pl-16">
                         <div
-                            class="absolute left-6 top-2 -translate-x-1/2
-                            w-4 h-4 rounded-full
-                            bg-blue-600 dark:bg-red-800">
+                            class="absolute left-6 top-2 -translate-x-1/2 w-4 h-4 rounded-full
+                            bg-highlight">
                         </div>
 
                         <h3
-                            class="text-xl font-bold uppercase
-                            text-neutral-900 dark:text-neutral-100">
+                            class="text-xl font-bold uppercase text-heading font-league-spartan">
                             Full Stack Developer
                         </h3>
 
-                        <p class="text-sm tracking-widest mt-1
-                            text-neutral-500">
+                        <p class="text-sm tracking-widest mt-1 text-desc font-dm-sans">
                             2022 — Present
                         </p>
 
                         <p
-                            class="mt-4 leading-relaxed max-w-2xl
-                            text-neutral-600 dark:text-neutral-400">
+                            class="mt-4 leading-relaxed max-w-2xl text-desc font-dm-sans">
                             Architected scalable web applications using Laravel
                             and modern frontend frameworks.
                         </p>
@@ -152,23 +123,23 @@
                         <div
                             class="absolute left-6 top-2 -translate-x-1/2
                             w-4 h-4 rounded-full
-                            bg-blue-600 dark:bg-red-800">
+                            bg-highlight">
                         </div>
 
                         <h3
                             class="text-xl font-bold uppercase
-                            text-neutral-900 dark:text-neutral-100">
+                            text-heading font-league-spartan">
                             UI/UX Designer
                         </h3>
 
                         <p class="text-sm tracking-widest mt-1
-                            text-neutral-500">
+                            text-desc font-dm-sans">
                             2020 — 2022
                         </p>
 
                         <p
                             class="mt-4 leading-relaxed max-w-2xl
-                            text-neutral-600 dark:text-neutral-400">
+                            text-desc font-dm-sans">
                             Crafted high-contrast, accessibility-driven interfaces.
                         </p>
                     </div>
@@ -179,47 +150,59 @@
     </section>
 
     <section
-        class="relative py-28 border-t
-        border-neutral-200 dark:border-neutral-900
-        bg-slate-50 dark:bg-black">
+        class="relative py-28 border-t border-highlight/20">
 
         <div class="max-w-6xl mx-auto px-6">
 
-            <h2 class="text-3xl font-extrabold uppercase
-                text-neutral-900 dark:text-neutral-100 mb-16">
+            <h2 class="text-3xl font-extrabold uppercase text-heading font-league-spartan mb-16">
                 Education
             </h2>
 
             <div
-                class="p-10 rounded-2xl max-w-3xl
-                bg-white dark:bg-neutral-900/60
-                border border-neutral-200 dark:border-neutral-800
+                class="p-10 my-6 rounded-2xl max-w-3xl
+                bg-white dark:bg-neutral-900/60 border border-highlight/10
                 shadow-sm dark:shadow-[0_40px_100px_rgba(0,0,0,0.9)]">
 
-                <h3 class="text-xl font-bold uppercase
-                    text-neutral-900 dark:text-neutral-100">
+                <h3 class="text-xl font-bold uppercase text-heading font-league-spartan">
                     Bachelor of Information Systems
                 </h3>
 
                 <p class="tracking-widest text-sm mt-2
-                    text-neutral-500">
+                    text-desc font-dm-sans">
                     2018 — 2022
                 </p>
 
                 <p class="mt-6 leading-relaxed
-                    text-neutral-600 dark:text-neutral-400">
+                    text-desc font-dm-sans">
                     Specialized in software architecture,
                     database systems, and human-computer interaction.
                 </p>
+            </div>
 
+            <div class="p-10 rounded-2xl max-w-3xl
+                bg-white dark:bg-neutral-900/60 border border-highlight/10
+                shadow-sm dark:shadow-[0_40px_100px_rgba(0,0,0,0.9)]">
+
+                <h3 class="text-xl font-bold uppercase text-heading font-league-spartan">
+                    SMK TI BALI GLOBAL BADUNG
+                </h3>
+
+                <p class="tracking-widest text-sm mt-2
+                    text-desc font-dm-sans">
+                    2020 — 2023
+                </p>
+
+                <p class="mt-6 leading-relaxed
+                    text-desc font-dm-sans">
+                    Specialized in software architecture,
+                    database systems, and human-computer interaction.
+                </p>
             </div>
         </div>
     </section>
 
     <section
-        class="relative py-32 border-t
-        border-neutral-200 dark:border-neutral-900
-        bg-white dark:bg-black">
+        class="relative py-32 border-t border-highlight/20">
 
         <div class="max-w-6xl mx-auto px-6">
 

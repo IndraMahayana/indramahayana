@@ -36,7 +36,8 @@
     @endisset
 
     <div
-        class="min-h-screen bg-linear-to-br from-bg via-bg-soft to-blue-100 dark:to-black px-4 sm:px-6 md:px-16 lg:px-24 xl:px-32 pt-28 md:pt-0
+        class="min-h-screen bg-linear-to-br from-bg via-bg-soft to-blue-100 dark:to-black
+        {{ $class ?? '' }}
     ">
 
         <main class="min-h-screen">
